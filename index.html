@@ -74,9 +74,47 @@
        .m-3{
          border-radius: 5%;
        }
+       .ripple{
+        height:300px;
+        width:300px;
+        background:-webkit-radial-gradient(#ffedbc,#ed4264);
+
+        position:fixed;
+        animation:ripple 0.5s linear;
+        border-radius:50%;
+        opacity:0;
+        transform:scale(0);
+        transform-origin:center;
+        z-index:5;
+    }
+@keyframes ripple{
+    from{
+        transform:scale(0);
+        opacity:1;
+    }
+    to{
+        transform:scale(1);
+        opacity:0;
+    }
+}
      </style>
 </head>
 <body>
+    <script>
+    document.body.onclick=(e)=>{
+        let x= e.clientX
+        let y= e.clientY
+        let ripple= document.createElement("span")
+        ripple.className="ripple"
+        ripple.style.left=x-150+"px"
+        ripple.style.top=y-150+"px"
+        document.body.appendChild(ripple)
+        setTimeout(()=>{
+            ripple.remove()
+        },500)
+    }
+
+  </script>
 <div class="container">
   <div class="media mt-5">
     <img src="https://api.sololearn.com/Uploads/Avatars/20082039.jpg" class="m-3" alt="image" width="75px" height="75px">
@@ -91,6 +129,8 @@
   <br>
   <!-- <a href="https://twitter.com/your-name" class="btn btn-outline-light btn-block" role="button"><i class="fab fa-twitter">&nbsp;</i>Twitter</a>
   <br> -->
+  <a href="https://www.sololearn.com/profile/19733010" class="btn btn-outline-light btn-block" role="button"><i class="bi bi-flower1">&nbsp;</i>Sololearn</a>
+  <br>
   <a href="https://www.instagram.com/igx_chauhan" class="btn btn-outline-light btn-block" role="button"><i class="fab fa-instagram">&nbsp;</i>Instagram</a>
   <br>
   <a href="https://rksprog.blogspot.com/" class="btn btn-outline-light btn-block" role="button"><i class="fa fa-code">&nbsp;</i>My Code Bits</a>
@@ -116,7 +156,7 @@
     </h6>
   </div>
 </div>
-<img src="https://hitcounter.pythonanywhere.com/count/tag.svg?url=example.com" alt="Hits" hidden=True>
+<img src="https://hitcounter.pythonanywhere.com/count/tag.svg?url=https://rishu-k.github.io/Links/" alt="Hits">
 </body>
   
 </html>
