@@ -21,9 +21,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,300&display=swap"
+    rel="stylesheet">
+
+  <!-- <link rel="stylesheet" href="style.css"> -->
   <title>Links - Rishu</title>
   <style>
     body {
@@ -44,9 +47,46 @@
       color: #eceff4;
     }
 
+    .img-wrapper {
+      max-width: 200px;
+      position: relative;
+    }
+
+    .img {
+      width: 100%;
+      display: block;
+      border-radius: 50%;
+    }
+
+    .img-wrapper::before {
+      content: "";
+      position: absolute;
+      inset: -7px;
+      border: 4px solid #2e3440;
+      border-top-color: #fff;
+      border-bottom-color: #5ddcff;
+      border-radius: 60%;
+      z-index: -1;
+      animation: rotate 3s linear infinite;
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
     hr {
       color: #d8dee9;
       border-color: #d8dee9;
+    }
+
+    .media-body {
+      padding-left: 0.6rem;
     }
 
     .name {
@@ -142,11 +182,15 @@
   </script>
   <div class="container">
     <div class="media mt-5">
-      <img
-        src="https://yt3.ggpht.com/hl48P6hfN1GJynzr49YFWJDEb15icpmepvgSJpxYYA8SY2ViXLI5xNCsBnBSZ4RgJyvhv287Ow=s88-c-k-c0x00ffffff-no-rj"
-        class="m-3" alt="image" width="75px" height="75px">
+      <div id="bubble" class="img-wrapper">
+        <img class="img"
+          src="https://yt3.ggpht.com/hl48P6hfN1GJynzr49YFWJDEb15icpmepvgSJpxYYA8SY2ViXLI5xNCsBnBSZ4RgJyvhv287Ow=s88-c-k-c0x00ffffff-no-rj"
+          class="m-3" alt="image" width="75px" height="75px">
+      </div>
       <div class="media-body m-2">
-        <h5 class="align-items-center mt-2">Rishu</h5>
+        <h5 class="align-items-center mt-2">Hi there👋, I’m <a href="https://github.com/rishu-k" class="name"> Rishu
+        </a>
+</h5>
         <p>✌ Just a curious kid who loves to learn and explore new things.</p>
       </div>
     </div>
@@ -165,17 +209,16 @@
       <a href="https://www.instagram.com/igx_chauhan" class="btn btn-outline-light btn-block" role="button"><i
           class="fab fa-instagram">&nbsp;</i>Instagram</a>
       <br>
-      <a href="https://www.youtube.com/@rishusnehnash" class="btn btn-outline-light btn-block" role="button"><i
+      <a href="https://www.youtube.com/@rishusnehansh" class="btn btn-outline-light btn-block" role="button"><i
           class="bi bi-play-btn-fill"></i>&nbsp;</i>Learn with Us</a>
-    </div>
-    <br>
-    <!-- <hr/>
-<br>
+      <br>
+      <!-- <hr/> -->
+      <!-- <br>
 <div class="mt-4">
   <a href="#" class="btn btn-outline-light btn-block" role="button" title="Coming soon"><i class="fa fa-laptop">&nbsp;</i>An interesting link <span class="mute">- use this for a notable project, a useful site or a link you want to share</span></a>
-  <br>
-  <a href="https://github.com/your-name/yourcoolproject" class="btn btn-outline-light btn-block" role="button" ><i class="fa fa-rocket">&nbsp;</i>ProJEcT<span class="mute">- Professional Joyous Echo Tester</span></a>
-</div> -->
+  <br> -->
+      <!-- <a href="https://github.com/your-name/yourcoolproject" class="btn btn-outline-light btn-block" role="button" ><i class="fa fa-rocket">&nbsp;</i>ProJEcT<span class="mute">- Professional Joyous Echo Tester</span></a> -->
+    </div>
     <!--------------------Footer---------------------------->
     <div class="footer mt-5">
       <h6>
